@@ -19,7 +19,7 @@ Lịch sử Chi Tiêu là một ứng dụng giúp người dùng theo dõi và 
 1. **Clone dự án**:
    Đầu tiên, bạn cần clone dự án về máy tính của mình bằng cách sử dụng lệnh sau:
    ```bash
-   git clone https://github.com/kenjiakira/lich-su-chi-tieu.git
+   git clone https://github.com/kenjiakira/urban-waffle.git
    ```
 
 2. **Cài đặt phụ thuộc**:
