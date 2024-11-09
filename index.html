@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử Chi Tiêu</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Bảng Điều Khiển Chi Tiêu</h1>
+
+    <div class="layout">
+
+      <div class="expense-form-box">
+        <h2>Thêm Các Khoản</h2>
+        <form id="expenseForm">
+            <label for="expenseDescription">Mô tả chi tiêu:</label>
+            <input type="text" id="expenseDescription" placeholder="Nhập mô tả chi tiêu" required>
+          
+            <label for="expenseAmount">Số tiền:</label>
+            <input type="number" id="expenseAmount" placeholder="Nhập số tiền" required min="0">
+          
+            <label for="expenseCategory">Phân loại:</label>
+            <select id="expenseCategory">
+                <option value="Ăn uống">Ăn uống</option>
+                <option value="Mua sắm">Mua sắm</option>
+                <option value="Đi lại">Đi lại</option>
+                <option value="Khác">Khác</option>
+                <option value="Sinh hoạt">Sinh hoạt</option>
+                <option value="Giải trí">Giải trí</option>
+                <option value="Chăm sóc sức khỏe">Chăm sóc sức khỏe</option>
+                <option value="Hóa đơn">Hóa đơn</option>
+                <option value="Giáo dục">Giáo dục</option>
+                <option value="Du lịch">Du lịch</option>
+                <option value="Tiết kiệm">Tiết kiệm</option>
+            </select>
+            
+          
+            <button type="submit">Thêm Chi Tiêu</button>
+          </form>
+          
+
+        <div class="total-expense-display">
+          <h3>Tổng Chi Tiêu</h3>
+          <div id="totalExpenseAmount">0 VNĐ</div>
+        </div>
+      </div>
+
+      <div class="expense-info-box">
+       
+        <div id="recentTransactions">
+          <h3>Giao Dịch Gần Đây</h3>
+          <ul id="recentTransactionsList">
+        
+          </ul>
+        </div>
+
+        <div class="filters">
+          <input type="text" id="search" placeholder="Tìm kiếm chi tiêu..." oninput="filterExpenses()">
+          <select id="sortBy" onchange="sortExpenses()">
+            <option value="date_asc">Ngày (cũ nhất)</option>
+            <option value="date_desc">Ngày (mới nhất)</option>
+            <option value="amount_asc">Số tiền (tăng dần)</option>
+            <option value="amount_desc">Số tiền (giảm dần)</option>
+          </select>
+          <button onclick="clearAllExpenses()">Xóa tất cả</button>
+        </div>
+        
+        <div id="categoryTotals">
+          <h3>Tổng Chi Tiêu Theo Phân Loại</h3>
+         
+          <canvas id="expenseChart" width="300" height="300"></canvas>
+        </div>
+
+        <h2>Danh Sách Chi Tiêu</h2>
+        <ul id="expenseList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Lịch sử Chi Tiêu. Tất cả các quyền được bảo lưu.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/KenjiDevv" target="_blank" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://github.com/kenjiakira" target="_blank" class="social-icon"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "elements": {
+      "expenseForm": "#expenseForm",
+      "expenseDescriptionInput": "#expenseDescription",
+      "expenseAmountInput": "#expenseAmount",
+      "expenseCategoryInput": "#expenseCategory",
+      "expenseList": "#expenseList",
+      "searchInput": "#search",
+      "sortBySelect": "#sortBy",
+      "totalExpenseAmount": "#totalExpenseAmount",
+      "expenseChart": "#expenseChart"
+    },
+    "categories": [
+      "Ăn uống",
+      "Mua sắm",
+      "Đi lại",
+      "Khác",
+      "Sinh hoạt",
+      "Giải trí",
+      "Chăm sóc sức khỏe",
+      "Hóa đơn",
+      "Giáo dục",
+      "Du lịch",
+      "Tiết kiệm"
+    ]
+  }
+  
